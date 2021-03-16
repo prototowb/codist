@@ -20,9 +20,10 @@ export default {
   background-color: #ccc;
   color: #252525;
   border-radius: 3px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5em 1em;
   display: inline-block;
   margin-right: 0.5rem;
+  font-size: 0.75em;
 }
 
 .frontend {
