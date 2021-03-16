@@ -25,10 +25,23 @@ export default {
         };
     },
     mutations: {
-
+      addMentor(state, payload) {
+        state.mentors.push(payload);
+      }
     },
     actions: {
+      addMentor(context, data) {
+        const mentorData = {
+          id: context.rootGetters.userId,
+          firstName: data.first,
+          lastName: data.last,
+          description: data.desc,
+          hourlyRate: data.rate,
+          areas: data.areas
+        };
 
+        context.commit('addMentor', mentorData);
+      }
     },
     getters: {
         mentors(state) {
@@ -36,6 +49,11 @@ export default {
         },
         hasMentors(state) {
             return state.mentors && state.mentors.length > 0;
+        },
+        isMentor(_, getters, _2, rootGetters) {
+          const mentors = getters.mentors;
+          const userId = rootGetters.userId;
+          return mentors.some(mentor => mentor.id === userId); 
         }
     }
 }
