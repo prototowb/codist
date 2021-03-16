@@ -133,12 +133,21 @@ input[type='checkbox'] + label {
   margin: 0 0 0 0.5rem;
 }
 
+input {
+  padding: .3em .6em;
+}
+
+textarea {
+    padding: .6em .6em;
+}
+
 input,
 textarea {
   display: block;
   width: 100%;
   border: 1px solid #ccc;
   font: inherit;
+  border-radius: 3px;
 }
 
 input:focus,
