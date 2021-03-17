@@ -22,7 +22,7 @@ export default {
             return this.firstName + ' ' + this.lastName;
         },
         mentorContactLink() {
-            return this.$route.path + '/mentors/' + this.id + '/contact'
+            return this.$route.path + '/' + this.id + '/contact'
         },
         mentorDetailsLink() {
             return this.$route.path + '/' + this.id;
