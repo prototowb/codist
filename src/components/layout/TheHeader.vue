@@ -4,7 +4,7 @@
       <h1><router-link to="/">.codist</router-link></h1>
       <ul>
         <li>
-          <router-link to="/mentors">All Mentors</router-link>
+          <router-link to="/mentors">Mentors</router-link>
         </li>
         <li>
           <router-link to="requests">Requests</router-link>
