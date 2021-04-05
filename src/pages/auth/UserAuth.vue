@@ -3,9 +3,9 @@
     <base-dialog :show="!!error" title="An error occurred" @close="handleError">
       <p>{{ error }}</p>
     </base-dialog>
-    <base-dialog :show="isLoading" title="Authenticating . . ." fixed
-      ><base-spinner></base-spinner
-    ></base-dialog>
+    <base-dialog :show="isLoading" title="Authenticating . . ." fixed>
+      <base-spinner></base-spinner>
+    </base-dialog>
     <base-card>
       <form @submit.prevent="submitForm">
         <div class="form-control">
@@ -21,6 +21,7 @@
           long
         </p>
         <base-button>{{ submitButtonCaption }}</base-button>
+        <p>or</p>
         <base-button type="button" mode="flat" @click="switchAuthMode">{{
           switchModeButtonCaption
         }}</base-button>
@@ -72,8 +73,8 @@ export default {
       this.isLoading = true;
 
       const actionPayload = {
-          email: this.email,
-          password: this.password,
+        email: this.email,
+        password: this.password,
       };
 
       try {
@@ -97,9 +98,9 @@ export default {
         this.mode = 'login';
       }
     },
-  },
-  handleError() {
-    this.error = null;
+    handleError() {
+      this.error = null;
+    },
   },
 };
 </script>
